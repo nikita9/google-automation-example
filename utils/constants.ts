@@ -1,11 +1,11 @@
 export const Constants = {
-  email: 'petedao@gmail.com',
-  password: 'Lkdjfh3mMb3b*&ff',
-  phone: '18688797788',
+  email: 'test@gmail.com',
+  password: 'f',
+  phone: '1877777788',
 
   numbers: {
-    1: '1(484)424-9683',
-    2: '1(802)870-6048'
+    1: '7(777)777-777',
+    2: '7(777)777-777'
   },
 
   waitPreset: {
