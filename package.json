@@ -1,0 +1,45 @@
+{
+  "name": "google",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "protractor": "5.4.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "2.8.8",
+    "cross-env": "5.2.0",
+    "jasmine": "3.2.0",
+    "jasmine-reporters": "2.3.2",
+    "jasmine-spec-reporter": "4.2.1",
+    "protractor-element-extend": "2.1.0",
+    "protractor-flake": "3.3.0",
+    "protractor-stop-describe-on-failure": "1.0.3",
+    "tslint": "5.11.0",
+    "tslint-eslint-rules": "5.4.0",
+    "tspath": "1.2.10",
+    "typescript": "3.0.3"
+  },
+  "scripts": {
+    "pretest": "npm run build",
+    "clean": "rm -rf dist",
+    "test": "node ./dist/config/protractor-runner.js",
+    "test:prod": "cross-env API_ENV=https:// LOCAL=true npm test",
+    "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "npm run clean",
+    "build": "npm run lint && tsc && tspath -f",
+    "build:dev": "tsc",
+    "postinstall": "webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "typings": "dist/declarations/src/index.d.ts",
+  "author": "Nikita Gerasimenko",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
